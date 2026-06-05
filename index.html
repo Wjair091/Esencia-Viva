@@ -1,16 +1,24 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aroma Natural</title>
+<title>Esencia Viva - Jabones y Exfoliantes Artesanales</title>
 
 <style>
-body{
-    font-family: Arial, sans-serif;
+
+*{
     margin:0;
     padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
     background:#f8f5f0;
+    color:#333;
+    line-height:1.6;
 }
 
 header{
@@ -20,99 +28,295 @@ header{
     padding:30px;
 }
 
+header img{
+    width:150px;
+    margin-bottom:15px;
+}
+
+nav{
+    background:#6d4520;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
 section{
-    padding:20px;
+    padding:40px 20px;
+    max-width:1200px;
+    margin:auto;
+}
+
+h2{
+    color:#8B5A2B;
+    margin-bottom:20px;
+    text-align:center;
 }
 
 .productos{
-    display:flex;
-    justify-content:center;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
-    flex-wrap:wrap;
 }
 
 .card{
     background:white;
-    padding:20px;
-    width:250px;
     border-radius:10px;
+    overflow:hidden;
     box-shadow:0 0 10px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin-top:15px;
+}
+
+.precio{
+    color:#8B5A2B;
+    font-size:20px;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+ul{
+    max-width:800px;
+    margin:auto;
 }
 
 footer{
     background:#8B5A2B;
     color:white;
     text-align:center;
-    padding:15px;
+    padding:20px;
 }
+
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    padding:12px;
+    border-radius:50%;
+    box-shadow:0 3px 6px rgba(0,0,0,0.3);
+}
+
+.whatsapp img{
+    width:40px;
+    height:40px;
+    display:block;
+}
+
 </style>
+
 </head>
 
 <body>
 
 <header>
-    <h1>Aroma Natural</h1>
-    <p>Cuidamos tu piel con ingredientes que nacen de la naturaleza</p>
+
+```
+<img src="logo.png" alt="Logo Esencia Viva">
+
+<h1>ESENCIA VIVA</h1>
+
+<p><strong>"Belleza natural para el cuidado de tu piel"</strong></p>
+```
+
 </header>
 
-<section>
-    <h2>Historia</h2>
-    <p>
-        Aroma Natural nació con el propósito de ofrecer jabones artesanales
-        elaborados con café, miel y avena para el cuidado de la piel.
-    </p>
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#historia">Historia</a>
+    <a href="#mision">Misión</a>
+    <a href="#vision">Visión</a>
+    <a href="#productos">Productos</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<section id="inicio">
+
+```
+<h2>Inicio</h2>
+
+<p>
+    Bienvenidos a Esencia Viva, una empresa dedicada a la elaboración
+    y comercialización de jabones y exfoliantes artesanales elaborados
+    con ingredientes naturales como café, miel y avena.
+</p>
+```
+
 </section>
 
-<section>
-    <h2>Misión</h2>
-    <p>Brindar productos artesanales de alta calidad para el bienestar de nuestros clientes.</p>
+<section id="historia">
+
+```
+<h2>Historia del Emprendimiento</h2>
+
+<p>
+    Esencia Viva nació como una iniciativa enfocada en ofrecer productos
+    artesanales que cuiden la piel de manera natural. Nuestro objetivo
+    es brindar alternativas saludables, amigables con el medio ambiente
+    y accesibles para todos los consumidores.
+</p>
+```
+
 </section>
 
-<section>
-    <h2>Visión</h2>
-    <p>Ser una empresa líder en productos artesanales para el cuidado personal.</p>
+<section id="identificacion">
+
+```
+<h2>Identificación de la Empresa</h2>
+
+<p><strong>Nombre:</strong> Esencia Viva</p>
+
+<p><strong>Actividad:</strong> Producción y comercialización de jabones y exfoliantes artesanales.</p>
+
+<p><strong>Sector:</strong> Cosmética natural y cuidado personal.</p>
+```
+
 </section>
 
-<section>
-    <h2>Productos</h2>
+<section id="mision">
 
-    <div class="productos">
+```
+<h2>Misión</h2>
 
-        <div class="card">
-            <h3>Jabón de Café</h3>
-            <p>Exfoliación natural.</p>
-            <h4>$8.000</h4>
-        </div>
+<p>
+    Elaborar productos artesanales de alta calidad para el cuidado
+    personal, utilizando ingredientes naturales que contribuyan al
+    bienestar y satisfacción de nuestros clientes.
+</p>
+```
 
-        <div class="card">
-            <h3>Jabón de Miel</h3>
-            <p>Hidratación profunda.</p>
-            <h4>$8.500</h4>
-        </div>
+</section>
 
-        <div class="card">
-            <h3>Jabón de Avena</h3>
-            <p>Ideal para piel sensible.</p>
-            <h4>$7.500</h4>
-        </div>
+<section id="vision">
 
+```
+<h2>Visión</h2>
+
+<p>
+    Ser una empresa reconocida a nivel nacional por la calidad,
+    innovación y sostenibilidad de nuestros productos artesanales.
+</p>
+```
+
+</section>
+
+<section id="calidad">
+
+```
+<h2>Política de Calidad</h2>
+
+<p>
+    Nos comprometemos a ofrecer productos elaborados con materias primas
+    seleccionadas, garantizando procesos responsables y altos estándares
+    de calidad que satisfagan las necesidades de nuestros clientes.
+</p>
+```
+
+</section>
+
+<section id="valor">
+
+```
+<h2>Valor Agregado</h2>
+
+<ul>
+    <li>Ingredientes 100% naturales.</li>
+    <li>Producción artesanal.</li>
+    <li>Productos amigables con el medio ambiente.</li>
+    <li>Beneficios específicos para cada tipo de piel.</li>
+    <li>Presentaciones atractivas y ecológicas.</li>
+</ul>
+```
+
+</section>
+
+<section id="productos">
+
+```
+<h2>Productos y Precios</h2>
+
+<div class="productos">
+
+    <div class="card">
+        <img src="jabon-cafe.jpg" alt="Jabón de Café">
+        <h3>Jabón de Café</h3>
+        <p>Exfoliación natural.</p>
+        <div class="precio">$8.000 COP</div>
     </div>
+
+    <div class="card">
+        <img src="jabon-miel.jpg" alt="Jabón de Miel">
+        <h3>Jabón de Miel</h3>
+        <p>Hidratación profunda.</p>
+        <div class="precio">$8.500 COP</div>
+    </div>
+
+    <div class="card">
+        <img src="jabon-avena.jpg" alt="Jabón de Avena">
+        <h3>Jabón de Avena</h3>
+        <p>Ideal para piel sensible.</p>
+        <div class="precio">$7.500 COP</div>
+    </div>
+
+    <div class="card">
+        <img src="exfoliante.jpg" alt="Exfoliante Artesanal">
+        <h3>Exfoliante Artesanal</h3>
+        <p>Renueva y revitaliza la piel.</p>
+        <div class="precio">$12.000 COP</div>
+    </div>
+
+</div>
+```
+
 </section>
 
-<section>
-    <h2>Contacto</h2>
+<section id="contacto">
 
-    <form>
-        <input type="text" placeholder="Nombre"><br><br>
-        <input type="email" placeholder="Correo"><br><br>
-        <textarea placeholder="Mensaje"></textarea><br><br>
-        <button>Enviar</button>
-    </form>
+```
+<h2>Contacto</h2>
+
+<p><strong>Teléfono:</strong> +57 XXX XXX XXXX</p>
+
+<p><strong>Correo:</strong> contacto@esenciaviva.com</p>
+
+<p><strong>Instagram:</strong> @esenciaviva</p>
+```
+
 </section>
 
 <footer>
-    © 2026 Aroma Natural - Todos los derechos reservados
+
+```
+<p>© 2026 Esencia Viva - Todos los derechos reservados.</p>
+```
+
 </footer>
+
+<a class="whatsapp"
+href="https://wa.me/573XXXXXXXXX?text=Hola,%20quiero%20información%20sobre%20los%20productos%20de%20Esencia%20Viva"
+target="_blank">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+
+</a>
 
 </body>
 </html>
