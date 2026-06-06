@@ -19,7 +19,7 @@ html{
 }
 
 body{
-    font-family: Arial, sans-serif;
+    font-family:Arial, sans-serif;
     background:#f8f5ef;
     color:#333;
     line-height:1.7;
@@ -65,14 +65,23 @@ nav a{
     text-decoration:none;
     margin:0 10px;
     font-weight:bold;
-    transition:0.3s;
+    transition:.3s;
 }
 
 nav a:hover{
     color:#ffd699;
 }
 
-/* SECCIONES */
+/* BANNER */
+
+.banner{
+    width:100%;
+    max-height:500px;
+    object-fit:cover;
+    display:block;
+}
+
+/* SECCIÓN PRODUCTOS */
 
 section{
     max-width:1200px;
@@ -80,33 +89,11 @@ section{
     padding:60px 20px;
 }
 
-.seccion{
-    background:white;
-    margin-bottom:25px;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 0 15px rgba(0,0,0,0.08);
-    animation:fadeIn 1s ease;
-}
-
 h2{
-    color:#8b5a2b;
-    margin-bottom:15px;
     text-align:center;
+    color:#8b5a2b;
+    margin-bottom:25px;
 }
-
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-/* PRODUCTOS */
 
 .productos{
     display:grid;
@@ -118,8 +105,8 @@ h2{
     background:white;
     border-radius:15px;
     overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition:0.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
 }
 
 .card:hover{
@@ -128,7 +115,7 @@ h2{
 
 .card img{
     width:100%;
-    height:250px;
+    height:260px;
     object-fit:cover;
 }
 
@@ -145,33 +132,50 @@ h2{
     margin-top:15px;
     font-weight:bold;
     color:#8b5a2b;
-    font-size:18px;
 }
 
-.boton{
-    display:inline-block;
-    margin-top:15px;
-    background:#8b5a2b;
-    color:white;
-    text-decoration:none;
-    padding:10px 15px;
-    border-radius:8px;
+/* MODALES */
+
+.modal{
+    display:none;
+    position:fixed;
+    z-index:9999;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.7);
 }
 
-.boton:hover{
-    background:#6e4420;
+.modal-content{
+    background:white;
+    width:90%;
+    max-width:700px;
+    margin:8% auto;
+    padding:30px;
+    border-radius:15px;
+    position:relative;
+    animation:fadeIn .4s;
 }
 
-/* LISTAS */
-
-ul{
-    margin-left:25px;
+.cerrar{
+    position:absolute;
+    right:20px;
+    top:10px;
+    font-size:35px;
+    cursor:pointer;
+    color:#8b5a2b;
 }
 
-/* CONTACTO */
-
-.contacto{
-    text-align:center;
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 /* FOOTER */
@@ -214,105 +218,38 @@ footer{
 
     <h1>ESENCIA VIVA</h1>
 
-    <p>“Renovación profunda de forma natural”</p>
+    <p>“Renovación profunda y cuidado natural para tu piel”</p>
 
 </header>
 
 <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#historia">Historia</a>
-    <a href="#mision">Misión</a>
-    <a href="#vision">Visión</a>
-    <a href="#calidad">Calidad</a>
-    <a href="#valor">Valor Agregado</a>
+    <a href="#" onclick="abrirModal('inicio')">Inicio</a>
+    <a href="#" onclick="abrirModal('historia')">Historia</a>
+    <a href="#" onclick="abrirModal('identificacion')">Identificación</a>
+    <a href="#" onclick="abrirModal('mision')">Misión</a>
+    <a href="#" onclick="abrirModal('vision')">Visión</a>
+    <a href="#" onclick="abrirModal('calidad')">Calidad</a>
+    <a href="#" onclick="abrirModal('valor')">Valor Agregado</a>
     <a href="#productos">Productos</a>
-    <a href="#contacto">Contacto</a>
+    <a href="#" onclick="abrirModal('contacto')">Contacto</a>
 </nav>
 
-<section>
+<img src="banner.jpg" alt="Banner Esencia Viva" class="banner">
 
-<div class="seccion" id="inicio">
-    <h2>Inicio</h2>
-    <p>
-        Bienvenido a Esencia Viva, una empresa dedicada a la elaboración
-        de jabones y exfoliantes artesanales elaborados con ingredientes
-        naturales seleccionados cuidadosamente para brindar bienestar,
-        cuidado y salud a la piel.
-    </p>
-</div>
-
-<div class="seccion" id="historia">
-    <h2>Historia del Emprendimiento</h2>
-    <p>
-        Esencia Viva nace con el propósito de ofrecer alternativas naturales
-        para el cuidado personal. Nuestro emprendimiento surge de la pasión
-        por la cosmética artesanal y el deseo de crear productos que combinen
-        calidad, naturaleza y bienestar.
-    </p>
-</div>
-
-<div class="seccion" id="identificacion">
-    <h2>Identificación de la Empresa</h2>
-
-    <p><strong>Nombre:</strong> Esencia Viva</p>
-
-    <p><strong>Actividad:</strong> Producción y comercialización de jabones y exfoliantes artesanales.</p>
-
-    <p><strong>Sector:</strong> Cosmética natural y cuidado personal.</p>
-</div>
-
-<div class="seccion" id="mision">
-    <h2>Misión</h2>
-
-    <p>
-        Elaborar productos artesanales de cuidado personal con ingredientes naturales, ofreciendo bienestar, calidad y una alternativa ecológica 
-    </p>
-</div>
-
-<div class="seccion" id="vision">
-    <h2>Visión</h2>
-
-    <p>
-        Para el año 2030 nuestro emprendimiento será líder en Norte de Santander en el cuidado de la piel, reconocida por transformar ingredientes naturales como el café, la miel y la avena en experiencias únicas que revitalizan y protegen, promoviendo la salud y el bienestar de nuestros clientes a través de productos artesanales de alta calidad y con un profundo respeto por el medio ambiente
-    </p>
-</div>
-
-<div class="seccion" id="calidad">
-    <h2>Política de Calidad</h2>
-
-    <p>
-        En Esencia Viva nos comprometemos a elaborar productos con materias
-        primas seleccionadas, garantizando procesos responsables y estándares
-        de calidad que aseguren la satisfacción de nuestros clientes.
-    </p>
-</div>
-
-<div class="seccion" id="valor">
-    <h2>Valor Agregado</h2>
-
-    <ul>
-        <li>Productos Naturales y Artesanales.</li>
-        <li>Diseño creativo (formas alusivas a los ingredientes) .</li>
-        <li>Uso de materiales reciclados.</li>
-        <li>Inclusión de kit combinado (jabón + exfoliante).</li>
-        <li>Presentación atractiva y ecológica.</li>
-   Esencia viva no solo ofrece jabones,
-   sino una experiencia completa de cuidado personal, 
-   combinando limpieza, exfoliación e hidratación con ingredientes naturales y amigables con el medio ambiente 
-    </ul>
-</div>
-
-<div class="seccion" id="productos">
+<section id="productos">
 
     <h2>Nuestros Productos</h2>
 
     <div class="productos">
 
         <div class="card">
-            <img src="jabon-cafe.jpg" alt="Jabón de Café">
+            <img src="jabon-cafe.jpg" alt="Jabón Artesanal de Café">
             <div class="card-content">
                 <h3>Jabón Artesanal de Café</h3>
-                <p>Ideal para exfoliar y revitalizar la piel de forma natural.</p>
+                <p>
+                    Ideal para exfoliar, revitalizar y ayudar a remover
+                    células muertas de la piel de forma natural.
+                </p>
                 <div class="precio">Precio por definir</div>
             </div>
         </div>
@@ -321,7 +258,10 @@ footer{
             <img src="exfoliante-cafe.jpg" alt="Exfoliante de Café">
             <div class="card-content">
                 <h3>Exfoliante de Café</h3>
-                <p>Ayuda a remover impurezas y renovar la piel.</p>
+                <p>
+                    Ayuda a limpiar profundamente la piel,
+                    eliminando impurezas y mejorando su apariencia.
+                </p>
                 <div class="precio">Precio por definir</div>
             </div>
         </div>
@@ -330,7 +270,10 @@ footer{
             <img src="jabon-avena.jpg" alt="Jabón de Avena">
             <div class="card-content">
                 <h3>Jabón de Avena</h3>
-                <p>Ideal para pieles sensibles y delicadas.</p>
+                <p>
+                    Especial para pieles sensibles,
+                    aportando suavidad y protección natural.
+                </p>
                 <div class="precio">Precio por definir</div>
             </div>
         </div>
@@ -339,26 +282,15 @@ footer{
             <img src="jabon-miel.jpg" alt="Jabón de Miel">
             <div class="card-content">
                 <h3>Jabón de Miel</h3>
-                <p>Brinda hidratación y suavidad natural.</p>
+                <p>
+                    Brinda hidratación, nutrición y una agradable
+                    sensación de frescura para la piel.
+                </p>
                 <div class="precio">Precio por definir</div>
             </div>
         </div>
 
     </div>
-
-</div>
-
-<div class="seccion contacto" id="contacto">
-
-    <h2>Contacto</h2>
-
-    <p><strong>WhatsApp:</strong> Por agregar</p>
-
-    <p><strong>Correo:</strong> contacto@esenciaviva.com</p>
-
-    <p><strong>Instagram:</strong> @esenciaviva</p>
-
-</div>
 
 </section>
 
@@ -370,9 +302,183 @@ footer{
 href="#"
 target="_blank">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+alt="WhatsApp">
 
 </a>
+    <!-- MODAL INICIO -->
+
+<div id="inicio" class="modal">
+    <div class="modal-content">
+        <span class="cerrar" onclick="cerrarModal('inicio')">&times;</span>
+
+        <h2>Inicio</h2>
+
+        <p>
+            Bienvenido a <strong>Esencia Viva</strong>, una empresa dedicada a la elaboración
+            de jabones y exfoliantes artesanales elaborados con ingredientes
+            naturales seleccionados cuidadosamente para brindar bienestar,
+            cuidado y salud a la piel.
+        </p>
+    </div>
+</div>
+
+<!-- MODAL HISTORIA -->
+
+<div id="historia" class="modal">
+    <div class="modal-content">
+        <span class="cerrar" onclick="cerrarModal('historia')">&times;</span>
+
+        <h2>Historia del Emprendimiento</h2>
+
+        <p>
+            Esencia Viva nace con el propósito de ofrecer alternativas naturales
+            para el cuidado personal. Nuestro emprendimiento surge de la pasión
+            por la cosmética artesanal y el deseo de crear productos que combinen
+            calidad, naturaleza y bienestar.
+        </p>
+    </div>
+</div>
+
+<!-- MODAL IDENTIFICACIÓN -->
+
+<div id="identificacion" class="modal">
+    <div class="modal-content">
+        <span class="cerrar" onclick="cerrarModal('identificacion')">&times;</span>
+
+        <h2>Identificación de la Empresa</h2>
+
+        <p><strong>Nombre:</strong> Esencia Viva</p>
+
+        <p>
+            <strong>Actividad:</strong>
+            Producción y comercialización de jabones y exfoliantes artesanales.
+        </p>
+
+        <p>
+            <strong>Sector:</strong>
+            Cosmética natural y cuidado personal.
+        </p>
+    </div>
+</div>
+
+<!-- MODAL MISIÓN -->
+
+<div id="mision" class="modal">
+    <div class="modal-content">
+        <span class="cerrar" onclick="cerrarModal('mision')">&times;</span>
+
+        <h2>Misión</h2>
+
+        <p>
+            Elaborar productos artesanales de cuidado personal con ingredientes
+            naturales, ofreciendo bienestar, calidad y una alternativa ecológica.
+        </p>
+    </div>
+</div>
+
+<!-- MODAL VISIÓN -->
+
+<div id="vision" class="modal">
+    <div class="modal-content">
+        <span class="cerrar" onclick="cerrarModal('vision')">&times;</span>
+
+        <h2>Visión</h2>
+
+        <p>
+            Para el año 2030 nuestro emprendimiento será líder en Norte de Santander
+            en el cuidado de la piel, reconocida por transformar ingredientes
+            naturales como el café, la miel y la avena en experiencias únicas que
+            revitalizan y protegen, promoviendo la salud y el bienestar de nuestros
+            clientes a través de productos artesanales de alta calidad y con un
+            profundo respeto por el medio ambiente.
+        </p>
+    </div>
+</div>
+
+<!-- MODAL CALIDAD -->
+
+<div id="calidad" class="modal">
+    <div class="modal-content">
+        <span class="cerrar" onclick="cerrarModal('calidad')">&times;</span>
+
+        <h2>Política de Calidad</h2>
+
+        <p>
+            En Esencia Viva nos comprometemos a elaborar productos con materias
+            primas seleccionadas, garantizando procesos responsables y estándares
+            de calidad que aseguren la satisfacción de nuestros clientes.
+        </p>
+    </div>
+</div>
+
+<!-- MODAL VALOR AGREGADO -->
+
+<div id="valor" class="modal">
+    <div class="modal-content">
+        <span class="cerrar" onclick="cerrarModal('valor')">&times;</span>
+
+        <h2>Valor Agregado</h2>
+
+        <ul>
+            <li>Productos naturales y artesanales.</li>
+            <li>Diseño creativo inspirado en ingredientes naturales.</li>
+            <li>Uso de materiales reciclados y amigables con el ambiente.</li>
+            <li>Kit combinado de jabón y exfoliante.</li>
+            <li>Presentación atractiva y ecológica.</li>
+        </ul>
+
+        <br>
+
+        <p>
+            Esencia Viva no solo ofrece jabones, sino una experiencia completa de
+            cuidado personal, combinando limpieza, exfoliación e hidratación con
+            ingredientes naturales y amigables con el medio ambiente.
+        </p>
+    </div>
+</div>
+
+<!-- MODAL CONTACTO -->
+
+<div id="contacto" class="modal">
+    <div class="modal-content">
+        <span class="cerrar" onclick="cerrarModal('contacto')">&times;</span>
+
+        <h2>Contacto</h2>
+
+        <p><strong>WhatsApp:</strong> Por agregar</p>
+
+        <p><strong>Correo:</strong> contacto@esenciaviva.com</p>
+
+        <p><strong>Instagram:</strong> @esenciaviva</p>
+    </div>
+</div>
+
+<script>
+
+function abrirModal(id){
+    document.getElementById(id).style.display = "block";
+}
+
+function cerrarModal(id){
+    document.getElementById(id).style.display = "none";
+}
+
+window.onclick = function(event){
+
+    let modales = document.querySelectorAll(".modal");
+
+    modales.forEach(function(modal){
+
+        if(event.target == modal){
+            modal.style.display = "none";
+        }
+
+    });
+
+}
+
+</script>
 
 </body>
 </html>
