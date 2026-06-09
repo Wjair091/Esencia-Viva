@@ -317,237 +317,339 @@ footer{
 
 <section id="productos">
 
-    <h2>Nuestros Productos</h2>
+```
+<h2>Nuestros Productos</h2>
 
-    <div class="productos">
+<div class="productos">
 
-        <div class="card">
-            <img src="jabon-cafe.jpg" alt="Jabón Artesanal de Café">
-            <div class="card-content">
-                <h3>Jabón Natural de Café</h3>
-                <p>
-                    Ideal para exfoliar, revitalizar y ayudar a remover
-                    células muertas de la piel de forma natural.
-                </p>
-                <div class="precio">Precio por definir</div>
-                <button class="boton-info"
-onclick="abrirModal('productoCafe')">
-Detalles del Producto
-</button>
-            </div>
+    <!-- JABÓN CAFÉ -->
+
+    <div class="card">
+        <img src="jabon-cafe.jpg" alt="Jabón de Café">
+
+        <div class="card-content">
+
+            <h3>Jabón Natural de Café</h3>
+
+            <p>
+                Ideal para exfoliar, revitalizar y ayudar a remover
+                células muertas de la piel de forma natural.
+            </p>
+
+            <div class="precio">Precio por definir</div>
+
+            <button class="boton-info"
+            onclick="abrirModal('productoCafe')">
+            Detalles del Producto
+            </button>
+
         </div>
-
-        <div class="card">
-            <img src="exfoliante-cafe.jpg" alt="Exfoliante de Café">
-            <div class="card-content">
-                <h3>Exfoliante de Café</h3>
-                <p>
-                    Ayuda a limpiar profundamente la piel,
-                    eliminando impurezas y mejorando su apariencia.
-                </p>
-                <div class="precio">Precio por definir</div>
-                <button class="boton-info"
-onclick="abrirModal('exfolianteCafe')">
-Detalles del producto
-</button>
-                <div id="exfolianteCafe" class="modal">
-
-<div class="modal-content">
-
-<span class="cerrar"
-onclick="cerrarModal('exfolianteCafe')">&times;</span>
-
-<h2>Exfoliante de Café</h2>
-
-<h3>Beneficios</h3>
-
-<ul>
-<li>Ayuda a eliminar impurezas.</li>
-<li>Favorece la renovación de la piel.</li>
-<li>Mejora la suavidad de la piel.</li>
-<li>Brinda sensación de frescura.</li>
-</ul>
-
-<h3>Modo de uso</h3>
-
-<p>
-Aplicar sobre la piel húmeda realizando movimientos circulares suaves.
-Enjuagar con abundante agua.
-Utilizar 2 o 3 veces por semana.
-</p>
-
-<h3>Ingredientes principales</h3>
-
-<ul>
-<li>Café molido.</li>
-<li>Aceites naturales.</li>
-<li>Ingredientes exfoliantes naturales.</li>
-</ul>
-
-</div>
-</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="jabon-avena.jpg" alt="Jabón de Avena">
-            <div class="card-content">
-                <h3>Jabón de Avena</h3>
-                <p>
-                    Especial para pieles sensibles,
-                    aportando suavidad y protección natural.
-                </p>
-                <div class="precio">Precio por definir</div>
-                <button class="boton-info"
-onclick="abrirModal('jabonAvena')">
-Detalles del producto
-</button>
-                <div id="jabonAvena" class="modal">
-
-<div class="modal-content">
-
-<span class="cerrar"
-onclick="cerrarModal('jabonAvena')">&times;</span>
-
-<h2>Jabón de Avena</h2>
-
-<h3>Beneficios</h3>
-
-<ul>
-<li>Ideal para piel sensible.</li>
-<li>Ayuda a hidratar la piel.</li>
-<li>Brinda suavidad natural.</li>
-<li>Favorece el cuidado diario.</li>
-</ul>
-
-<h3>Modo de uso</h3>
-
-<p>
-Aplicar sobre la piel húmeda,
-masajear suavemente y enjuagar.
-Puede utilizarse diariamente.
-</p>
-
-<h3>Ingredientes principales</h3>
-
-<ul>
-<li>Avena natural.</li>
-<li>Base glicerinada.</li>
-<li>Esencias naturales.</li>
-</ul>
-
-</div>
-</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="jabon-miel.jpg" alt="Jabón de Miel">
-            <div class="card-content">
-                <h3>Jabón de Miel</h3>
-                <p>
-                    Brinda hidratación, nutrición y una agradable
-                    sensación de frescura para la piel.
-                </p>
-                <div class="precio">Precio por definir</div>
-                <button class="boton-info"
-onclick="abrirModal('jabonMiel')">
-Detalles del producto
-</button>
-                <div id="jabonMiel" class="modal">
-
-<div class="modal-content">
-
-<span class="cerrar"
-onclick="cerrarModal('jabonMiel')">&times;</span>
-
-<h2>Jabón de Miel</h2>
-
-<h3>Beneficios</h3>
-
-<ul>
-<li>Ayuda a hidratar la piel.</li>
-<li>Aporta suavidad y nutrición.</li>
-<li>Favorece una piel saludable.</li>
-<li>Ideal para uso diario.</li>
-</ul>
-
-<h3>Modo de uso</h3>
-
-<p>
-Aplicar sobre la piel húmeda,
-masajear suavemente y enjuagar con abundante agua.
-</p>
-
-<h3>Ingredientes principales</h3>
-
-<ul>
-<li>Miel natural.</li>
-<li>Base glicerinada.</li>
-<li>Esencias naturales.</li>
-</ul>
-
-</div>
-</div>
-            </div>
-        </div>
-<div class="card">
-    <img src="kit-cafe.jpg" alt="Kit Café">
-
-    <div class="card-content">
-
-       <h3>⭐ Kit Café (Jabón + Exfoliante)</h3>
-
-        <p>
-            Combina los beneficios del jabón artesanal y el exfoliante de café
-            para una limpieza profunda, exfoliación natural y una piel más suave.
-        </p>
-
-        <div class="precio">Precio por definir</div>
-<button class="boton-info"
-onclick="abrirModal('kitCafe')">
-Detalles del producto
-</button>
-     <div id="kitCafe" class="modal">
-
-<div class="modal-content">
-
-<span class="cerrar"
-onclick="cerrarModal('kitCafe')">&times;</span>
-
-<h2>⭐ Kit Café</h2>
-
-<h3>Incluye</h3>
-
-<ul>
-<li>Jabón Natural de Café.</li>
-<li>Exfoliante de Café.</li>
-</ul>
-
-<h3>Beneficios</h3>
-
-<ul>
-<li>Limpieza profunda.</li>
-<li>Exfoliación natural.</li>
-<li>Ayuda a revitalizar la piel.</li>
-<li>Experiencia completa de cuidado personal.</li>
-</ul>
-
-<h3>Modo de uso</h3>
-
-<p>
-Utilizar primero el jabón de café para limpiar la piel y posteriormente
-el exfoliante para complementar la rutina de cuidado.
-</p>
-
-</div>
-</div>   
-
     </div>
-</div>
+
+    <!-- EXFOLIANTE -->
+
+    <div class="card">
+
+        <img src="exfoliante-cafe.jpg" alt="Exfoliante de Café">
+
+        <div class="card-content">
+
+            <h3>Exfoliante de Café</h3>
+
+            <p>
+                Ayuda a limpiar profundamente la piel,
+                eliminando impurezas y mejorando su apariencia.
+            </p>
+
+            <div class="precio">Precio por definir</div>
+
+            <button class="boton-info"
+            onclick="abrirModal('exfolianteCafe')">
+            Detalles del Producto
+            </button>
+
+        </div>
     </div>
+
+    <!-- AVENA -->
+
+    <div class="card">
+
+        <img src="jabon-avena.jpg" alt="Jabón de Avena">
+
+        <div class="card-content">
+
+            <h3>Jabón de Avena</h3>
+
+            <p>
+                Especial para pieles sensibles,
+                aportando suavidad y protección natural.
+            </p>
+
+            <div class="precio">Precio por definir</div>
+
+            <button class="boton-info"
+            onclick="abrirModal('jabonAvena')">
+            Detalles del Producto
+            </button>
+
+        </div>
+    </div>
+
+    <!-- MIEL -->
+
+    <div class="card">
+
+        <img src="jabon-miel.jpg" alt="Jabón de Miel">
+
+        <div class="card-content">
+
+            <h3>Jabón de Miel</h3>
+
+            <p>
+                Brinda hidratación, nutrición y una agradable
+                sensación de frescura para la piel.
+            </p>
+
+            <div class="precio">Precio por definir</div>
+
+            <button class="boton-info"
+            onclick="abrirModal('jabonMiel')">
+            Detalles del Producto
+            </button>
+
+        </div>
+    </div>
+
+    <!-- KIT -->
+
+    <div class="card">
+
+        <img src="kit-cafe.jpg" alt="Kit Café">
+
+        <div class="card-content">
+
+            <h3>⭐ Kit Café (Jabón + Exfoliante)</h3>
+
+            <p>
+                Combina los beneficios del jabón y exfoliante
+                para una limpieza profunda y revitalizante.
+            </p>
+
+            <div class="precio">Precio por definir</div>
+
+            <button class="boton-info"
+            onclick="abrirModal('kitCafe')">
+            Detalles del Producto
+            </button>
+
+        </div>
+    </div>
+
+</div>
+```
 
 </section>
+
+<!-- ========================= -->
+
+<!-- MODALES PRODUCTOS -->
+
+<!-- ========================= -->
+
+<div id="productoCafe" class="modal">
+
+```
+<div class="modal-content">
+
+    <span class="cerrar"
+    onclick="cerrarModal('productoCafe')">&times;</span>
+
+    <h2>Jabón Natural de Café</h2>
+
+    <h3>Beneficios</h3>
+
+    <ul>
+        <li>Exfolia suavemente la piel.</li>
+        <li>Ayuda a eliminar células muertas.</li>
+        <li>Favorece una apariencia más luminosa.</li>
+        <li>Brinda sensación de frescura.</li>
+    </ul>
+
+    <h3>Modo de uso</h3>
+
+    <p>
+        Humedece la piel, aplica el jabón realizando movimientos
+        circulares suaves y enjuaga con abundante agua.
+    </p>
+
+    <h3>Ingredientes</h3>
+
+    <ul>
+        <li>Café molido.</li>
+        <li>Base glicerinada.</li>
+        <li>Esencias naturales.</li>
+    </ul>
+
+</div>
+```
+
+</div>
+
+<div id="exfolianteCafe" class="modal">
+
+```
+<div class="modal-content">
+
+    <span class="cerrar"
+    onclick="cerrarModal('exfolianteCafe')">&times;</span>
+
+    <h2>Exfoliante de Café</h2>
+
+    <h3>Beneficios</h3>
+
+    <ul>
+        <li>Elimina impurezas.</li>
+        <li>Favorece la renovación celular.</li>
+        <li>Suaviza la piel.</li>
+        <li>Ayuda a mejorar su apariencia.</li>
+    </ul>
+
+    <h3>Modo de uso</h3>
+
+    <p>
+        Aplicar sobre la piel húmeda realizando movimientos
+        circulares y enjuagar.
+    </p>
+
+    <h3>Ingredientes</h3>
+
+    <ul>
+        <li>Café molido.</li>
+        <li>Aceites naturales.</li>
+        <li>Extractos vegetales.</li>
+    </ul>
+
+</div>
+```
+
+</div>
+
+<div id="jabonAvena" class="modal">
+
+```
+<div class="modal-content">
+
+    <span class="cerrar"
+    onclick="cerrarModal('jabonAvena')">&times;</span>
+
+    <h2>Jabón de Avena</h2>
+
+    <h3>Beneficios</h3>
+
+    <ul>
+        <li>Ideal para pieles sensibles.</li>
+        <li>Ayuda a hidratar la piel.</li>
+        <li>Aporta suavidad natural.</li>
+        <li>Protección diaria.</li>
+    </ul>
+
+    <h3>Modo de uso</h3>
+
+    <p>
+        Aplicar sobre la piel húmeda, masajear suavemente y
+        enjuagar.
+    </p>
+
+    <h3>Ingredientes</h3>
+
+    <ul>
+        <li>Avena natural.</li>
+        <li>Base glicerinada.</li>
+        <li>Esencias naturales.</li>
+    </ul>
+
+</div>
+```
+
+</div>
+
+<div id="jabonMiel" class="modal">
+
+```
+<div class="modal-content">
+
+    <span class="cerrar"
+    onclick="cerrarModal('jabonMiel')">&times;</span>
+
+    <h2>Jabón de Miel</h2>
+
+    <h3>Beneficios</h3>
+
+    <ul>
+        <li>Ayuda a hidratar la piel.</li>
+        <li>Aporta nutrición.</li>
+        <li>Brinda suavidad.</li>
+        <li>Ideal para uso diario.</li>
+    </ul>
+
+    <h3>Modo de uso</h3>
+
+    <p>
+        Aplicar sobre la piel húmeda, masajear y enjuagar con
+        abundante agua.
+    </p>
+
+    <h3>Ingredientes</h3>
+
+    <ul>
+        <li>Miel natural.</li>
+        <li>Base glicerinada.</li>
+        <li>Esencias naturales.</li>
+    </ul>
+
+</div>
+```
+
+</div>
+
+<div id="kitCafe" class="modal">
+
+```
+<div class="modal-content">
+
+    <span class="cerrar"
+    onclick="cerrarModal('kitCafe')">&times;</span>
+
+    <h2>⭐ Kit Café</h2>
+
+    <h3>Incluye</h3>
+
+    <ul>
+        <li>Jabón Natural de Café.</li>
+        <li>Exfoliante de Café.</li>
+    </ul>
+
+    <h3>Beneficios</h3>
+
+    <ul>
+        <li>Limpieza profunda.</li>
+        <li>Exfoliación natural.</li>
+        <li>Revitalización de la piel.</li>
+        <li>Rutina completa de cuidado personal.</li>
+    </ul>
+
+    <h3>Modo de uso</h3>
+
+    <p>
+        Utilizar primero el jabón de café y luego complementar
+        con el exfoliante para obtener mejores resultados.
+    </p>
+
+</div>
+```
+
+</div>
 
 <footer>
     <p>© 2026 Esencia Viva - Todos los derechos reservados.</p>
