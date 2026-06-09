@@ -133,7 +133,21 @@ h2{
     font-weight:bold;
     color:#8b5a2b;
 }
+.boton-info{
+    background:#8b5a2b;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-top:15px;
+    width:100%;
+    font-weight:bold;
+}
 
+.boton-info:hover{
+    background:#6e4420;
+}
 /* MODALES */
 
 .modal{
@@ -316,6 +330,10 @@ footer{
                     células muertas de la piel de forma natural.
                 </p>
                 <div class="precio">Precio por definir</div>
+                <button class="boton-info"
+onclick="abrirModal('productoCafe')">
+Ver beneficios
+</button>
             </div>
         </div>
 
@@ -518,7 +536,50 @@ alt="WhatsApp">
         </p>
     </div>
 </div>
+<!-- MODAL JABÓN DE CAFÉ -->
 
+<div id="productoCafe" class="modal">
+
+    <div class="modal-content">
+
+        <span class="cerrar"
+        onclick="cerrarModal('productoCafe')">&times;</span>
+
+        <h2>Jabón Natural de Café</h2>
+
+        <h3>Beneficios</h3>
+
+        <ul>
+            <li>Exfolia suavemente la piel.</li>
+            <li>Ayuda a eliminar células muertas.</li>
+            <li>Favorece una apariencia más suave y luminosa.</li>
+            <li>Brinda sensación de frescura.</li>
+            <li>Ideal para complementar la rutina de cuidado personal.</li>
+        </ul>
+
+        <br>
+
+        <h3>Modo de uso</h3>
+
+        <p>
+            Humedece la piel con agua, aplica el jabón realizando
+            movimientos circulares suaves y enjuaga con abundante agua.
+            Puede utilizarse diariamente.
+        </p>
+
+        <br>
+
+        <h3>Ingredientes principales</h3>
+
+        <ul>
+            <li>Café molido.</li>
+            <li>Base glicerinada.</li>
+            <li>Esencias naturales.</li>
+        </ul>
+
+    </div>
+
+</div>
 <!-- MODAL CONTACTO -->
 
 <div id="contacto" class="modal">
