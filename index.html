@@ -206,6 +206,57 @@ footer{
 .whatsapp img{
     width:38px;
 }
+    /* MENÚ LATERAL */
+
+.menu-btn{
+    position:fixed;
+    top:20px;
+    left:20px;
+    z-index:9999;
+    background:#6e4420;
+    color:white;
+    border:none;
+    width:55px;
+    height:55px;
+    border-radius:10px;
+    font-size:28px;
+    cursor:pointer;
+    box-shadow:0 4px 10px rgba(0,0,0,.3);
+}
+
+.menu-lateral{
+    height:100%;
+    width:0;
+    position:fixed;
+    z-index:9998;
+    top:0;
+    left:0;
+    background:#6e4420;
+    overflow-x:hidden;
+    transition:.4s;
+    padding-top:80px;
+}
+
+.menu-lateral a{
+    padding:15px 30px;
+    text-decoration:none;
+    font-size:20px;
+    color:white;
+    display:block;
+}
+
+.menu-lateral a:hover{
+    background:#8b5a2b;
+}
+
+.cerrar-menu{
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-size:40px;
+    color:white;
+    cursor:pointer;
+}
 
 </style>
 </head>
@@ -222,17 +273,31 @@ footer{
 
 </header>
 
-<nav>
-    <a href="#" onclick="abrirModal('inicio')">Inicio</a>
-    <a href="#" onclick="abrirModal('historia')">Historia</a>
-    <a href="#" onclick="abrirModal('identificacion')">Identificación</a>
-    <a href="#" onclick="abrirModal('mision')">Misión</a>
-    <a href="#" onclick="abrirModal('vision')">Visión</a>
-    <a href="#" onclick="abrirModal('calidad')">Calidad</a>
-    <a href="#" onclick="abrirModal('valor')">Valor Agregado</a>
-    <a href="#productos">Productos</a>
-    <a href="#" onclick="abrirModal('contacto')">Contacto</a>
-</nav>
+<button class="menu-btn" onclick="abrirMenu()">☰</button>
+
+<div id="menuLateral" class="menu-lateral">
+
+<span class="cerrar-menu" onclick="cerrarMenu()">&times;</span>
+
+<a href="#" onclick="abrirModal('inicio'); cerrarMenu();">Inicio</a>
+
+<a href="#" onclick="abrirModal('historia'); cerrarMenu();">Historia</a>
+
+<a href="#" onclick="abrirModal('identificacion'); cerrarMenu();">Identificación</a>
+
+<a href="#" onclick="abrirModal('mision'); cerrarMenu();">Misión</a>
+
+<a href="#" onclick="abrirModal('vision'); cerrarMenu();">Visión</a>
+
+<a href="#" onclick="abrirModal('calidad'); cerrarMenu();">Calidad</a>
+
+<a href="#" onclick="abrirModal('valor'); cerrarMenu();">Valor Agregado</a>
+
+<a href="#productos" onclick="cerrarMenu()">Productos</a>
+
+<a href="#" onclick="abrirModal('contacto'); cerrarMenu();">Contacto</a>
+
+</div>
 
 <img src="banner.jpg" alt="Banner Esencia Viva" class="banner">
 
@@ -477,7 +542,13 @@ window.onclick = function(event){
     });
 
 }
+function abrirMenu(){
+    document.getElementById("menuLateral").style.width = "300px";
+}
 
+function cerrarMenu(){
+    document.getElementById("menuLateral").style.width = "0";
+}
 </script>
 
 </body>
